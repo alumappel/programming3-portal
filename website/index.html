@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="מרחב הפעילות הקבוצתית לפיתוח תוצר למידה" />
+  <meta name="theme-color" content="#F7F6F2" />
+  <title>ממשק מלווה לתרגיל האמצע</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.rtl.min.css?v=20261021-vanilla-1" />
+  <link rel="stylesheet" href="css/style.css?v=20261021-signpost-1" />
+</head>
+
+<body class="student-page">
+  <a class="skip-link" href="#main">דילוג לתוכן</a>
+  <header class="site-header">
+    <div class="container-fluid shell header-inner justify-content-end">
+      <a class="quiet-link" href="./" target="_blank" rel="noopener" id="standalone">פתיחה בחלון
+        חדש <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main" class="container-fluid shell" tabindex="-1">
+    <div id="messages" hidden aria-live="polite"></div>
+    <section class="intro activity-banner" aria-labelledby="activity-title">
+      <div class="banner-copy">
+        <h1 id="activity-title">ממשק מלווה לתרגיל האמצע</h1>
+        <p id="activity-description" class="lead">
+          ההנחיות, הקבצים ושלבי העבודה של הקבוצה שלכם מרוכזים במקום אחד.
+        </p>
+      </div>
+      <img class="hero-illustration" src="images/direction-signpost.png?v=20261021-signpost-1" width="1536"
+        height="1024" alt="" aria-hidden="true" decoding="async" fetchpriority="high" />
+    </section>
+    <section class="activity-toolbar" aria-label="בחירת קבוצה">
+      <div class="group-picker">
+        <div class="picker-symbol" id="picker-icon" aria-hidden="true"></div>
+        <div class="picker-field">
+          <label class="form-label" for="group-select">מה מספר הקבוצה שלכם?</label><select class="form-select"
+            id="group-select" aria-describedby="group-help" disabled>
+            <option value="">בחירת קבוצה</option>
+          </select>
+        </div>
+
+      </div>
+    </section>
+    <section class="general-panel" aria-labelledby="general-heading">
+      <div class="section-heading">
+        <span class="section-symbol" id="general-icon" aria-hidden="true"></span>
+        <h2 id="general-heading">לפני שמתחילים</h2>
+        <span class="tag">הנחיות הפעילות</span>
+      </div>
+      <div id="general-content">
+        <p class="muted">ההנחיות בדרך אליכם…</p>
+      </div>
+    </section>
+    <section class="journey-section" aria-labelledby="journey-heading">
+      <div class="journey-heading">
+        <div>
+          <h2 id="journey-heading">המסלול שלכם:</h2>
+        </div>
+        <span class="small muted" id="journey-summary"></span>
+      </div>
+      <div class="row g-4">
+        <aside class="col-lg-4">
+          <nav id="stages" class="stage-list" aria-label="שלבי הפעילות"></nav>
+        </aside>
+        <div class="col-lg-8">
+          <section class="stage-panel" aria-labelledby="stage-heading">
+            <div class="stage-panel-heading">
+              <span class="tag" id="selected-label">מרחב הלמידה</span>
+              <h2 id="stage-heading" tabindex="-1">הפעילות תתחיל כאן</h2>
+              <p id="stage-description" class="muted"></p>
+            </div>
+            <div id="stage-content">
+              <div class="loading-state" role="status">טוענים את התוכן…</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <noscript>
+      <p class="notice notice-error">
+        יש להפעיל JavaScript בדפדפן כדי לבחור קבוצה ולצפות בשלבי הפעילות.
+      </p>
+    </noscript>
+  </main>
+  <footer class="container-fluid shell footer justify-content-end">
+    <div class="footer-end ">
+      <a id="editor-link" class="icon-button" href="/admin/" target="_blank" rel="noopener" aria-label="כניסה לעורך"
+        title="כניסה לעורך">✎</a>
+    </div>
+  </footer>
+  <script type="module" src="js/app.js?v=20261021-file-blocks-2"></script>
+</body>
+
+</html>

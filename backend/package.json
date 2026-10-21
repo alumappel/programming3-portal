@@ -1,0 +1,13 @@
+{
+  "name": "group-learning-backend",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node server/local.mjs",
+    "dev": "node server/local.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "export": "node scripts/export-public.mjs"
+  }
+}

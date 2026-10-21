@@ -1,0 +1,343 @@
+{
+  "version": "e40d0d09-3430-4b2f-b551-288caa60848d",
+  "publishedAt": "2026-10-21T15:53:51.661Z",
+  "content": {
+    "schemaVersion": 1,
+    "activity": {
+      "title": "תרגיל אמצע - תכנות 3",
+      "description": "",
+      "timeZone": "Asia/Jerusalem"
+    },
+    "groups": [
+      {
+        "id": "group-1",
+        "number": 1,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-2",
+        "number": 2,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-3",
+        "number": 3,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-4",
+        "number": 4,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-5",
+        "number": 5,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-6",
+        "number": 6,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-7",
+        "number": 7,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-8",
+        "number": 8,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-9",
+        "number": 9,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-10",
+        "number": 10,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-11",
+        "number": 11,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-12",
+        "number": 12,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-13",
+        "number": 13,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-14",
+        "number": 14,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-15",
+        "number": 15,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-16",
+        "number": 16,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-17",
+        "number": 17,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-18",
+        "number": 18,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-19",
+        "number": 19,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-20",
+        "number": 20,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-21",
+        "number": 21,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-22",
+        "number": 22,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-23",
+        "number": 23,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-24",
+        "number": 24,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-25",
+        "number": 25,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-26",
+        "number": 26,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-27",
+        "number": 27,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-28",
+        "number": 28,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-29",
+        "number": 29,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-30",
+        "number": 30,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-31",
+        "number": 31,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-32",
+        "number": 32,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-33",
+        "number": 33,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-34",
+        "number": 34,
+        "name": "",
+        "active": true
+      },
+      {
+        "id": "group-35",
+        "number": 35,
+        "name": "",
+        "active": true
+      }
+    ],
+    "stages": [
+      {
+        "id": "stage-1",
+        "title": "היכרות והתנעה",
+        "description": "",
+        "order": 1,
+        "opensAt": "2026-10-21T05:00:00.000Z",
+        "published": true
+      },
+      {
+        "id": "stage-2",
+        "title": "בריף ראשוני",
+        "description": "",
+        "order": 2,
+        "opensAt": "2026-10-21T09:00:00.000Z",
+        "published": true
+      },
+      {
+        "id": "stage-3",
+        "title": "חיבור לLMS",
+        "description": "",
+        "order": 3,
+        "opensAt": "2026-10-21T09:00:00.000Z",
+        "published": true
+      },
+      {
+        "id": "stage-4",
+        "title": "משוב מהלקוח",
+        "description": "",
+        "order": 4,
+        "opensAt": "2026-10-21T05:00:00.000Z",
+        "published": true
+      },
+      {
+        "id": "stage-5",
+        "title": "סיכום והגשה",
+        "description": "",
+        "order": 5,
+        "opensAt": "2026-10-21T08:00:00.000Z",
+        "published": true
+      }
+    ],
+    "instructions": [
+      {
+        "id": "welcome",
+        "title": "רגע לפני שצוללים למים",
+        "body": "השלב הראשון נועד כדי להכין את הקרקע לתרגיל ולסייע לנו להתאים את התרגיל אליכם.\nלקראת השבוע הבא עליכם לבצע 2 משימות: \n\n1. להתחלק  [ברכיב המוודל](https://md.hit.ac.il/mod/choicegroup/view.php?id=967139) לקבוצות עבודה.  שימו לב! מספר הקבוצה שאליה תשתבצו ילווה אתכם לאורך התרגיל, זכרו אותו.\n\n2. למלא את טופס ההיכרות הקצר העוסק בפרויקט הגמר שלכם, במידה ולחברי הקבוצה שלכם מספר פרויקטי גמר שונים - בחרו פרויקט גמר של אחד מחברי הקבוצה.\n",
+        "stageId": "stage-1",
+        "groupId": null,
+        "order": 1,
+        "published": true,
+        "fileIds": []
+      },
+      {
+        "id": "instruction-49f5108a-a190-4614-bf6d-af98189d4ac1",
+        "title": "ברוכות וברוכים הבאים",
+        "body": "ריכזנו עבורכם את כל חלקי מטלת האמצע במקום אחד. בממשק זה תוכלו לצפות גם בהנחיות הכלליות לכל הכיתה וגם בהנחיות הספציפיות שבנינו לכל קבוצה בנפרד. בשבועות הקרובים אנחנו נפרסם בהדרגה את שלבי התרגיל השונים, עקבו אחרי ההנחיות פה בממשק ותרגישו בנוח לפנות אלינו במידת הצורך.\n* כדי לראות את הקבצים הרלוונטים לקבוצה שלכם עליכם לבחור בכפתור מעלה את מספר הקבוצה אליה השתבצתם במוודל. ",
+        "stageId": null,
+        "groupId": null,
+        "order": 2,
+        "published": true,
+        "fileIds": []
+      },
+      {
+        "id": "instruction-afc1b47c-34fe-4a5b-9067-1fde000c1dc7",
+        "title": "איזו התרגשות! הגיע הרגע להתחיל. ",
+        "body": "בהמשך לשיעורים בהם תזכרנו והעמקנו בפיתוח אתרים ושילוב AI בתהליכי הפיתוח, עליכם להתחיל לפתח תוצר ללקוח הפיקטיבי שיצרנו לכם בקורס. הלקוח שלך אליכם 2 קבצים המדייקים את הרצון שלו.\n1. אפיון דרישות טכנולוגיות: קובץ ההנחיות הבסיסי החל על כלל הסטודנטים בקורס\n2. תיאור צורך: קובץ ייחודי לקבוצה שלכם המדייק מה הלקוח שלכם רוצה שתיצרו עבורו.\n\nאז .... 3.... 2.... 1 - צאו לעבוד!\n\n🔮 **טיפ ממגדת העתידות:** כדור הבדולח שלי מעונן, אבל דבר אחד ברור - כדאי שתזדרזו כי בשבוע הבא הלקוח יבוא בדרישות טכנולוגיות נוספות. \n",
+        "stageId": "stage-2",
+        "groupId": null,
+        "order": 3,
+        "published": true,
+        "fileIds": []
+      },
+      {
+        "id": "instruction-b5fc88f3-234b-4dfc-b3fd-b77bf23d986f",
+        "title": "שוב שלום לכם! ההתוצר כבר ממש קורם עור וגידים. ",
+        "body": "הלקוח מאוד אהב את מה שפיתחתם עד כה והראה את זה גם למנהלת מחלקת ההדרכה וגם לIT (טוב שהוא נזכר...) והם ציינו 2 נקודות חשובות מאוד, הראשונה היא שהארגון עובד עם LMS בו הוא מנהל את הלמידה ועוקב אחרי הביצועים. הLMS הארגוני שלהם הוא Moodle, והם מעוניינים לחבר את תוצר שלכם אליו ולאסוף דרכו את נתוני השימוש. בנוסף הם לא רוצים להכניס את זה לשרת הארגוני שלהם כך שאחסון ישירות על הLMS יקל עליהם משמעותית מבחינת מחלקת מחשוב.\nלרשותם מסמך דרישות מרכז לביצוע הפיתוח הנוסף ואנחנו מזכירים שזמינה עבורכם סביבת התנסות במוודל בה תוכלו לבצע את כל הבדיקות לפני שאתם מוסרים את המוצר ללקוח.\nבשבוע הבא יש לכם סבב תיקונים עם הלקוח והוא ישמח לראות את התוצר כבר על הLMS.\n\n💫 **טיפ מהנומרולוגית המשרדית:** המספרים שלי מראים שצירוף האותיות L-M-S עומד לעשות לכם קארמה רעה אם לא תבדקו את התוצר לעומק בריצה על המוודל. מספר המזל שלכם השבוע הוא \"בדיקה מוקדמת\", כי הלקוח מגיע השבוע לבדוק האם הכוכבים (והכפתורים בלומדה) באמת מסתדרים בשורה.\n",
+        "stageId": "stage-3",
+        "groupId": null,
+        "order": 4,
+        "published": true,
+        "fileIds": []
+      },
+      {
+        "id": "instruction-a1800a2c-7963-4a4b-8f8c-06602c12d51a",
+        "title": "כל הכבוד לכם! אתם כבר ממש בישורת האחרונה",
+        "body": "אחרי ששלחתם אותו ללקוח לסבב תיקונים הוא חוזר עליכם עם כמה הערות. עברו על המייל מהלקוח ודייקו את התוצר בהתאם. בנוסף בבקשה מלאו את טופס הצ'ק-אין הקצר אחרי שקראתם את ההודעה מהלקוח.\nבשיעור הקרוב נקיים ייעוצים, עליכם לקרוא את המשוב מהלקוח ולמלא את הטופס לפני שאתם עולים לייעוץ.\n\n🧘**טיפ מהגורו המשרדי:** האנרגיות שלי מראות שאתם בסוף הדרך, האור באופק, אבל שום קריסטל ( או המרצה) לא ייסיע אם תגיעו לייעוץ בלי לעבור קודם על המשוב של הלקוח ולמלא את טופס הצ'ק-אין. תנשמו עמוק, תקראו, תענו, ותסגרו את הפינה הזו.\n",
+        "stageId": "stage-4",
+        "groupId": null,
+        "order": 5,
+        "published": true,
+        "fileIds": []
+      },
+      {
+        "id": "instruction-1d425328-3952-4f50-b9da-65f8dce74a19",
+        "title": "תותחי ותותחיות על!",
+        "body": "אם אתם פה כנראה שגבר יש לכם תוצר מוכן. רגע לפני שאתם מגישים ריכזנו עבורכם את מסמך ההנחיות המלא, הנחיות ההגשה והמכוון לציון. \nעברו על הכל וודאו את הפרויקט שלכם, בצעו בדיקות מקיפות ותיקונים במידת הצורך.\n**בנוסף בבקשה מלאו באופן אישי את השאלון המסכם.**\n",
+        "stageId": "stage-5",
+        "groupId": null,
+        "order": 6,
+        "published": true,
+        "fileIds": []
+      }
+    ],
+    "forms": [
+      {
+        "id": "form-f2b9969b-8382-44d1-9ed2-8db9c640bf85",
+        "title": "בדיקה",
+        "description": "טופס בדיקה הסבר קצר",
+        "stageId": "stage-1",
+        "groupId": null,
+        "order": 2,
+        "published": true,
+        "responseType": "group",
+        "openUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfvJPGOx2vdlutRCc38H4gDbpftpQ_zRhZzyHONc-rx223WwA/viewform",
+        "embedUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfvJPGOx2vdlutRCc38H4gDbpftpQ_zRhZzyHONc-rx223WwA/viewform?embedded=true"
+      }
+    ],
+    "files": []
+  }
+}

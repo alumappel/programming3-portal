@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>עורך הפעילות</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.rtl.min.css?v=20261021-vanilla-1" />
+    <link rel="stylesheet" href="css/admin.css?v=20261021-vanilla-1" />
+  </head>
+
+  <body class="admin-page">
+    <a href="#main" class="skip-link">דילוג לתוכן</a>
+    <header class="site-header">
+      <div class="container-fluid shell header-inner">
+        <a class="brand" href="./"
+          ><span class="brand-mark">ק</span
+          ><span>מרחב הפעילות<span class="brand-sub">סביבת הניהול של המרצה</span></span></a
+        >
+        <div class="action-row">
+          <a class="quiet-link" id="student-link" href="index.html" target="_blank" rel="noopener"
+            >לתצוגת הסטודנטים ↗</a
+          ><button id="logout" class="btn btn-outline-primary" hidden>יציאה</button>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="container-fluid shell" tabindex="-1">
+      <div id="messages" hidden aria-live="polite"></div>
+      <section id="setup-panel" class="login-card" hidden>
+        <span class="section-symbol" aria-hidden="true">✎</span>
+        <p class="eyebrow mt-4">ברוכים הבאים לעורך</p>
+        <h1>בחירת סיסמת עורך</h1>
+        <p class="muted">הגדירו סיסמה פעם אחת. היא תשמש גם בכניסות הבאות. שם המשתמש הוא <bdi>Admin</bdi>.</p>
+        <form id="setup-form">
+          <div class="mb-3">
+            <label for="setup-password" class="form-label">סיסמה חדשה</label>
+            <input id="setup-password" class="form-control" type="password" autocomplete="new-password" required minlength="12" maxlength="200" dir="ltr" aria-describedby="setup-help" />
+            <p id="setup-help" class="small muted mt-2">12 תווים לפחות.</p>
+          </div>
+          <div class="mb-3">
+            <label for="setup-confirm" class="form-label">הקלידו שוב את הסיסמה</label>
+            <input id="setup-confirm" class="form-control" type="password" autocomplete="new-password" required minlength="12" maxlength="200" dir="ltr" />
+          </div>
+          <label class="form-check d-flex gap-2 mb-4"><input id="show-setup-password" class="form-check-input" type="checkbox" />הצגת הסיסמה</label>
+          <button class="btn btn-primary w-100" type="submit">שמירת סיסמה וכניסה לעורך</button>
+        </form>
+      </section>
+      <section id="login-panel" class="login-card">
+        <span class="section-symbol" aria-hidden="true">✎</span>
+        <p class="eyebrow mt-4">סביבת הניהול</p>
+        <h1>כניסה לעורך</h1>
+        <p class="muted">ניהול ההנחיות, הקבוצות ומועדי הפעילות במקום אחד.</p>
+        <form id="login-form">
+          <div class="mb-3">
+            <label for="username" class="form-label">שם משתמש</label
+            ><input
+              id="username"
+              class="form-control"
+              autocomplete="username"
+              value="Admin"
+              required
+              maxlength="100"
+              dir="ltr"
+            />
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label">סיסמה</label
+            ><input
+              id="password"
+              class="form-control"
+              type="password"
+              autocomplete="current-password"
+              required
+              maxlength="200"
+              dir="ltr"
+            />
+          </div>
+          <label class="form-check d-flex gap-2 mb-4"
+            ><input id="show-password" class="form-check-input" type="checkbox" />הצגת הסיסמה</label
+          ><button class="btn btn-primary w-100" type="submit">כניסה לעורך</button>
+        </form>
+        <p class="small muted mt-4 mb-0">
+          התחברו עם Admin והסיסמה שבחרתם בהפעלה הראשונה.
+        </p>
+      </section>
+      <div id="workspace" hidden>
+        <section class="admin-intro">
+          <div>
+            <p class="eyebrow">ניהול הפעילות</p>
+            <h1>מכינים את הצעד הבא</h1>
+            <p class="muted mb-0" id="save-status">טוענים טיוטה…</p>
+          </div>
+          <div class="action-row">
+            <button id="export-draft" class="btn btn-outline-primary" type="button">
+              הורדת עותק העריכה</button
+            ><button id="save" class="btn btn-outline-primary" type="button">שמירת טיוטה</button
+            ><button id="publish" class="btn btn-primary" type="button">פרסום הפעילות</button>
+          </div>
+        </section>
+        <nav class="admin-tabs" id="admin-tabs" aria-label="מסכי ניהול">
+          <button data-tab="overview" class="active" aria-current="page">סקירה</button
+          ><button data-tab="stages">שלבים ומועדים</button><button data-tab="groups">קבוצות</button
+          ><button data-tab="instructions">הנחיות וקבצים</button
+          ><button data-tab="forms">טפסים</button><button data-tab="preview">תצוגה מקדימה</button
+          ><button data-tab="history">פרסום וגרסאות</button>
+        </nav>
+        <div id="editor-panel" class="editor-panel"></div>
+      </div>
+      <noscript>
+        <p class="notice notice-error">יש להפעיל JavaScript כדי להשתמש בעורך.</p>
+      </noscript>
+    </main>
+    <footer class="container-fluid shell footer">
+      <span>טיוטה נשארת פרטית עד לפרסום.</span
+      ><span class="small muted">כל המועדים לפי שעון ישראל</span>
+    </footer>
+    <script type="module" src="js/admin.js?v=20261021-file-blocks-2"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+# Public repository: keep the application folders and project configuration.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/LICENSE.*
+!/.github/
+!/.vscode/
+!/website/
+!/backend/
+
+# Private runtime data, content exports, and backups, wherever they are created.
+.local/
+.private/
+backups/
+content-seed/
+portal-state.json
+.env*
+.dev.vars*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.bak
+*.backup
+*.zip
+*.7z
+*.rar
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Installed dependencies, deployment caches, and test output.
+node_modules/
+.wrangler/
+test-results/
+playwright-report/
+coverage/
+*.log
+*.pid
+
+# Personal editor settings and operating system files.
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db

@@ -1,0 +1,23 @@
+name = "group-learning-portal"
+main = "server/worker.js"
+compatibility_date = "2026-10-21"
+
+[assets]
+directory = "../website"
+binding = "ASSETS"
+run_worker_first = true
+
+[vars]
+ADMIN_ORIGIN = "https://YOUR-WORKER.workers.dev"
+PUBLIC_ORIGIN = "https://YOUR-USERNAME.github.io"
+GITHUB_REPOSITORY = "YOUR-USERNAME/PRIVATE-CONTENT-REPO"
+GITHUB_BRANCH = "main"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "group-learning-auth"
+database_id = "REPLACE-WITH-D1-ID"
+migrations_dir = "migrations"
+
+# Set GITHUB_TOKEN, ADMIN_SALT and ADMIN_PASSWORD_HASH through Cloudflare Secrets.
+# Never put secrets in this file or in dist/.

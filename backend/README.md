@@ -53,3 +53,23 @@ npm.cmd test
 בעלת החשבון מגדירה ידנית בחיבורי ה־Worker את `DB`, יוצרת את הטבלאות שב־`migrations/0001_auth.sql` ומוסיפה תחת Variables and Secrets שלושה סודות מסוג Secret: `GITHUB_TOKEN`, `ADMIN_SALT`, `ADMIN_PASSWORD_HASH`. למפתח GitHub נדרשת הרשאת Contents לקריאה ולכתיבה למאגר `programming3-content`. ערכי הסודות אינם נכנסים לקובץ ההגדרות או למאגר הציבורי.
 
 קוד ה־Worker מגיש ישירות את קובצי `website`, ומשתמש במאגר התוכן הפרטי וב־D1 לניהול חיבורים. גם `wrangler.example.toml` נשמר כדוגמת הגדרות. הכתובות המקוונות כבר הוגדרו ב־`website/js/config.js`; הקריאה ל־API נבחרת אוטומטית באירוח המקוון, בעוד ש־Live Server ממשיך לקרוא JSON מקומי. ההקמה בחשבון Cloudflare והפריסה בפועל מבוצעות ידנית בידי בעלת החשבון.
+
+### חיבור המאגר והפעלת הפריסה הראשונה
+
+ב־Cloudflare פותחים את ה־Worker הקיים `programming3-editor`, עוברים אל Settings → Builds → Connect ומחברים את המאגר `alumappel/programming3-portal` עם ענף הייצור `main`. משאירים את Build command ריק. כאשר שדה Root directory אינו מופיע והתיקייה הראשית היא שורש המאגר, מגדירים את Deploy command כך:
+
+```text
+npx wrangler@4.151.3 deploy --cwd backend
+```
+
+אם Root directory כבר הוגדר כ־`backend`, משתמשים בפקודה `npx wrangler@4.151.3 deploy` בלי `--cwd backend`, כדי לא לחפש תיקיית `backend` נוספת בתוכה. סודות זמן הריצה נשמרים תחת Variables and Secrets של ה־Worker.
+
+לאחר שמירת חיבור של Worker קיים, דוחפים commit חדש לענף `main` כדי להפעיל את הפריסה. השלמת החיבור למאגר אינה מאשרת שקוד השירות כבר נפרס. עוקבים אחר הריצה ב־Deployments וב־View build history.
+
+בדיקה ידנית לאחר הצלחת הפריסה:
+
+1. פותחים את [העורך המקוון](https://programming3-editor.alumappel.workers.dev/admin.html). צפוי מסך הכניסה של הפורטל.
+2. מתחברים עם `Admin` והסיסמה המקומית שנשמרו עבורה הסודות. מוודאים שהתוכן שהוזן, 35 הקבוצות וההיסטוריה קיימים.
+3. פותחים את [אתר הסטודנטים](https://alumappel.github.io/programming3-portal/), בוחרים קבוצה 3 ואת השלב המתאים, ומוודאים שהטופס שפורסם מופיע. בדיקות נוספות מפורטות ב־[מדריך הבדיקות](../website/TESTING.md).
+
+אם הפריסה נכשלת, מעתיקים את הודעת השגיאה מיומן הריצה ללא סודות. אם עדיין מוצג `Hello World`, בודקים שהריצה החדשה בענף `main` הסתיימה בהצלחה ושהיא הפריסה הפעילה של `programming3-editor`. אם אין ריצה חדשה, בודקים שה־commit נדחף לאחר חיבור המאגר ושבניות אינן מושבתות. אם הכניסה נכשלת, בודקים את חיבור `DB`, טבלאות ההתחברות והסודות לפי נוסח השגיאה.

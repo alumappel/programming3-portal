@@ -48,4 +48,8 @@ npm.cmd test
 
 ## מתאם Cloudflare
 
-קוד ה־Worker, מתאם מאגר התוכן הפרטי והמיגרציה של D1 נשמרו. קובץ `wrangler.example.toml` מצביע כעת אל `website` ישירות. לפני פריסה יש להגדיר כתובות אמיתיות ב־`website/js/config.js`, כתובות מקורות ב־Wrangler וסודות כניסה ו־GitHub בצד השירות. לשימוש בתוכן חי יש לבחור `readFromApi: true`. אין כרגע חיבור לחשבונות ייצור.
+קובץ `wrangler.jsonc` הוכן עבור ה־Worker בשם `programming3-editor`, המסד `programming3-auth` והמאגר הפרטי `alumappel/programming3-content`. הנתיב הראשי לפריסה הוא `backend`. בדיקת `wrangler deploy --dry-run` עם Wrangler 4.151.3 עברה מקומית; היא אינה יוצרת פריסה ואינה מאמתת את הטבלאות או הסודות בחשבון.
+
+בעלת החשבון מגדירה ידנית בחיבורי ה־Worker את `DB`, יוצרת את הטבלאות שב־`migrations/0001_auth.sql` ומוסיפה תחת Variables and Secrets שלושה סודות מסוג Secret: `GITHUB_TOKEN`, `ADMIN_SALT`, `ADMIN_PASSWORD_HASH`. למפתח GitHub נדרשת הרשאת Contents לקריאה ולכתיבה למאגר `programming3-content`. ערכי הסודות אינם נכנסים לקובץ ההגדרות או למאגר הציבורי.
+
+קוד ה־Worker מגיש ישירות את קובצי `website`, ומשתמש במאגר התוכן הפרטי וב־D1 לניהול חיבורים. גם `wrangler.example.toml` נשמר כדוגמת הגדרות. הכתובות המקוונות כבר הוגדרו ב־`website/js/config.js`; הקריאה ל־API נבחרת אוטומטית באירוח המקוון, בעוד ש־Live Server ממשיך לקרוא JSON מקומי. ההקמה בחשבון Cloudflare והפריסה בפועל מבוצעות ידנית בידי בעלת החשבון.

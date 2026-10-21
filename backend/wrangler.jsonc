@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "programming3-editor",
+  "main": "server/worker.js",
+  "compatibility_date": "2026-10-21",
+  "workers_dev": true,
+  "assets": {
+    "directory": "../website",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none"
+  },
+  "vars": {
+    "ADMIN_ORIGIN": "https://programming3-editor.alumappel.workers.dev",
+    "PUBLIC_ORIGIN": "https://alumappel.github.io",
+    "GITHUB_REPOSITORY": "alumappel/programming3-content",
+    "GITHUB_BRANCH": "main"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "programming3-auth",
+      "database_id": "a5bddf78-5e8d-4621-8930-eb93bc580cc5",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

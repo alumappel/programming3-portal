@@ -9,9 +9,9 @@ import {
   removeDraftFile,
   newestInstructions,
 } from './domain.js?v=20261021-file-blocks-2';
-import { $, api, apiUrl, escapeHtml as e, icon, message } from './helpers.js?v=20261021-file-blocks-2';
-import { renderRecords } from './helpers.js?v=20261021-file-blocks-2';
-import { PUBLIC_SITE_URL, ADMIN_URL, IS_ADMIN_ORIGIN } from './config.js?v=20261021-vanilla-1';
+import { $, api, apiUrl, escapeHtml as e, icon, message } from './helpers.js?v=20261021-hosting-1';
+import { renderRecords } from './helpers.js?v=20261021-hosting-1';
+import { PUBLIC_SITE_URL, ADMIN_URL, IS_ADMIN_ORIGIN } from './config.js?v=20261021-hosting-1';
 $('#student-link').href = PUBLIC_SITE_URL;
 let state,
   draft,

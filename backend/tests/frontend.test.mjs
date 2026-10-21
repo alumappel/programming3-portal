@@ -60,6 +60,28 @@ test('static PDF links stay within the public data folder instead of requiring t
   assert.equal(url.searchParams.get('v'), '2');
 });
 
+test('hosted student and editor pages use the online service while Live Server stays local', async () => {
+  const { connectionFor } = await import('../../website/js/config.js');
+  const student = connectionFor(new URL('https://alumappel.github.io/programming3-portal/'));
+  assert.equal(student.apiBase, 'https://programming3-editor.alumappel.workers.dev');
+  assert.equal(student.adminUrl, 'https://programming3-editor.alumappel.workers.dev/admin.html');
+  assert.equal(student.useApi, true);
+  assert.equal(student.isAdminOrigin, false);
+  assert.equal(student.publicSiteUrl, 'https://alumappel.github.io/programming3-portal/');
+  const editor = connectionFor(new URL('https://programming3-editor.alumappel.workers.dev/admin.html'));
+  assert.equal(editor.isAdminOrigin, true);
+  assert.equal(editor.useApi, true);
+  assert.equal(editor.publicSiteUrl, student.publicSiteUrl);
+  for (const host of ['127.0.0.1', 'localhost']) {
+    const local = connectionFor(new URL(`http://${host}:5500/index.html`));
+    assert.equal(local.apiBase, 'http://127.0.0.1:4173');
+    assert.equal(local.useApi, false);
+  }
+  const localEditor = connectionFor(new URL('http://127.0.0.1:4173/admin.html'));
+  assert.equal(localEditor.isAdminOrigin, true);
+  assert.equal(localEditor.useApi, true);
+});
+
 test('the public site contains no private data, build tree or package installation requirements', async () => {
   const entries = await readdir(site);
   for (const name of [

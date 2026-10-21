@@ -1,4 +1,4 @@
-name = "group-learning-portal"
+name = "programming3-editor"
 main = "server/worker.js"
 compatibility_date = "2026-10-21"
 
@@ -6,16 +6,17 @@ compatibility_date = "2026-10-21"
 directory = "../website"
 binding = "ASSETS"
 run_worker_first = true
+html_handling = "none"
 
 [vars]
-ADMIN_ORIGIN = "https://YOUR-WORKER.workers.dev"
-PUBLIC_ORIGIN = "https://YOUR-USERNAME.github.io"
-GITHUB_REPOSITORY = "YOUR-USERNAME/PRIVATE-CONTENT-REPO"
+ADMIN_ORIGIN = "https://programming3-editor.alumappel.workers.dev"
+PUBLIC_ORIGIN = "https://alumappel.github.io"
+GITHUB_REPOSITORY = "alumappel/programming3-content"
 GITHUB_BRANCH = "main"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "group-learning-auth"
+database_name = "programming3-auth"
 database_id = "REPLACE-WITH-D1-ID"
 migrations_dir = "migrations"
 

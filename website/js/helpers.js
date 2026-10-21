@@ -1,4 +1,4 @@
-import { API_BASE, CONTENT_URL, USE_API } from './config.js?v=20261021-vanilla-1';
+import { API_BASE, CONTENT_URL, USE_API } from './config.js?v=20261021-hosting-1';
 import { byOrder, normalizeFormUrl, separateFileInstructions } from './domain.js?v=20261021-file-blocks-2';
 export const $ = (query, root = document) => root.querySelector(query);
 export const escapeHtml = (value) =>

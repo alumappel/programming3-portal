@@ -203,9 +203,10 @@ export function createApi(env, store) {
         const errors = validateContent(state.draft);
         if (errors.length) throw new HttpError(422, 'הפרסום נעצר. יש לתקן את התוכן.', errors);
         const content = publicContent(state.draft);
-        for (const file of content.files)
-          if (!(await store.hasFile(file.id)))
-            throw new HttpError(422, `הקובץ ${file.name} אינו קיים באחסון. העלו אותו שוב.`);
+        const missing = new Set(await store.missingFiles(content.files.map((file) => file.id))),
+          missingFile = content.files.find((file) => missing.has(file.id));
+        if (missingFile)
+          throw new HttpError(422, `הקובץ ${missingFile.name} אינו קיים באחסון. העלו אותו שוב.`);
         const version = crypto.randomUUID();
         next = {
           ...state,

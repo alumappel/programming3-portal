@@ -53,8 +53,9 @@ export function localStore(directory) {
     async getFile(id) {
       return db.prepare('SELECT value FROM files WHERE id=?').get(id)?.value ?? null;
     },
-    async hasFile(id) {
-      return !!db.prepare('SELECT id FROM files WHERE id=?').get(id);
+    async missingFiles(ids) {
+      const exists = db.prepare('SELECT id FROM files WHERE id=?');
+      return ids.filter((id) => !exists.get(id));
     },
   };
 }

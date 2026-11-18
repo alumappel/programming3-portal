@@ -107,9 +107,14 @@ export function githubStore(env, fetcher = fetch) {
       const blob = await call(`/git/blobs/${meta.sha}`);
       return decode(blob.content);
     },
-    async hasFile(id) {
-      await call(`/contents/files/${id}.pdf?ref=${encodeURIComponent(env.GITHUB_BRANCH)}`);
-      return true;
+    async missingFiles(ids) {
+      if (!ids.length) return [];
+      // One metadata-only request checks the entire publication, without downloading PDFs.
+      const listing = await call(`/git/trees/${branch}?recursive=1`);
+      if (listing.truncated)
+        throw new HttpError(503, 'רשימת הקבצים שהתקבלה מ־GitHub אינה מלאה. הפרסום נעצר והגרסה החיה לא השתנתה.');
+      const paths = new Set(listing.tree.filter((entry) => entry.type === 'blob' && entry.mode !== '120000').map((entry) => entry.path));
+      return ids.filter((id) => !paths.has(`files/${id}.pdf`));
     },
   };
 }

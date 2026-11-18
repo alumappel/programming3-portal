@@ -11,9 +11,9 @@ import {
   icon,
   message,
   safeStorage,
-} from './helpers.js?v=20261021-hosting-1';
-import { ADMIN_URL, USE_API } from './config.js?v=20261021-hosting-1';
-import { renderRecords } from './helpers.js?v=20261021-hosting-1';
+} from './helpers.js?v=20261118-publish-1';
+import { ADMIN_URL, USE_API } from './config.js?v=20261118-publish-1';
+import { renderRecords } from './helpers.js?v=20261118-publish-1';
 let live,
   groupId = safeStorage('portal.group') || '',
   selected = null,
